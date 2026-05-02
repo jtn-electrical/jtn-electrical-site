@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JTN Electrical Pty Ltd provides general electrical, fault finding, lighting, power and maintenance services. Call 0410 026 248.">
+  <title>JTN Electrical Pty Ltd | Electrician</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #151515;
+      --text: #f7f7f2;
+      --muted: #b8b8ad;
+      --yellow: #ffd400;
+      --yellow-dark: #c99e00;
+      --line: #333327;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.4;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .hero {
+      display: grid;
+      align-content: center;
+      min-height: 100svh;
+      padding: 22px;
+      border-bottom: 8px solid var(--yellow);
+      background:
+        linear-gradient(135deg, rgba(255, 212, 0, 0.15), transparent 42%),
+        var(--bg);
+    }
+
+    .hero-inner,
+    .section-inner {
+      width: min(100%, 1080px);
+      margin: 0 auto;
+    }
+
+    .topline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 44px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand {
+      color: var(--yellow);
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(3.2rem, 15vw, 8.6rem);
+      line-height: 0.88;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: clamp(1.15rem, 5vw, 1.65rem);
+      font-weight: 800;
+    }
+
+    .call-now {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 78px;
+      margin-top: 30px;
+      padding: 20px 24px;
+      border: 3px solid var(--yellow);
+      border-radius: 6px;
+      color: #090909;
+      background: var(--yellow);
+      box-shadow: 0 10px 0 var(--yellow-dark);
+      font-size: clamp(1.5rem, 7vw, 2.3rem);
+      font-weight: 900;
+      line-height: 1;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .call-now:focus-visible,
+    .contact-link:focus-visible {
+      outline: 4px solid var(--text);
+      outline-offset: 5px;
+    }
+
+    .quick-details {
+      display: grid;
+      gap: 12px;
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    main {
+      background: var(--bg);
+    }
+
+    section {
+      padding: 48px 22px;
+    }
+
+    .services {
+      background: var(--panel);
+    }
+
+    .section-heading {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding-bottom: 8px;
+      border-bottom: 5px solid var(--yellow);
+      font-size: clamp(2.1rem, 10vw, 4.8rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .service-grid {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .service-grid li {
+      padding: 22px;
+      border: 2px solid var(--line);
+      border-left: 8px solid var(--yellow);
+      background: #0d0d0d;
+      font-size: clamp(1.25rem, 5vw, 2rem);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      padding-bottom: 56px;
+    }
+
+    .contact-panel {
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-link,
+    .small-detail {
+      display: block;
+      padding: 18px;
+      border: 2px solid var(--line);
+      background: var(--panel);
+      font-weight: 900;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link {
+      color: var(--yellow);
+      font-size: clamp(1.25rem, 6vw, 2rem);
+    }
+
+    .small-detail {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: #050505;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    @media (min-width: 700px) {
+      .hero {
+        padding: 34px;
+      }
+
+      .call-now {
+        width: auto;
+        min-width: 420px;
+      }
+
+      .quick-details {
+        grid-template-columns: repeat(3, max-content);
+        gap: 24px;
+      }
+
+      section {
+        padding: 72px 34px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-panel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="topline">
+          <strong class="brand">JTN Electrical Pty Ltd</strong>
+          <span>License number 70654</span>
+        </div>
+
+        <h1>Need an electrician?</h1>
+        <p class="hero-copy">Fast, direct electrical service. Call JTN Electrical now.</p>
+        <a class="call-now" href="tel:0410026248">Call Now 0410 026 248</a>
+
+        <div class="quick-details" aria-label="Business details">
+          <span>ABN 26 135 050 798</span>
+          <span>License number 70654</span>
+          <span>Service areas: All Brisbane</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="services" aria-labelledby="services-heading">
+        <div class="section-inner">
+          <h2 id="services-heading" class="section-heading">Services</h2>
+          <ul class="service-grid">
+            <li>General electrical</li>
+            <li>Fault finding</li>
+            <li>Lighting &amp; power</li>
+            <li>Maintenance</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-heading">
+        <div class="section-inner">
+          <h2 id="contact-heading" class="section-heading">Contact</h2>
+          <div class="contact-panel">
+            <a class="contact-link" href="tel:0410026248">0410 026 248</a>
+            <a class="contact-link" href="mailto:jtnelectrical@aapt.net.au">jtnelectrical@aapt.net.au</a>
+            <span class="small-detail">JTN Electrical Pty Ltd</span>
+            <span class="small-detail">ABN 26 135 050 798 | License number 70654 | Service areas: All Brisbane</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      JTN Electrical Pty Ltd | ABN 26 135 050 798 | License number 70654 | Service areas: All Brisbane
+    </footer>
+  </div>
+</body>
+</html>
